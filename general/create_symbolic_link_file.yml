@@ -1,0 +1,15 @@
+---
+name: "Create symbolic link file"
+command: "ln -s {{target}} {{link_name}}"
+tag:
+  - linux
+  - file
+description: "创建软链接"
+arguments:
+  - name: "target"
+    description: ~
+    default_value: ~
+  - name: "link_name"
+    description: ~
+    default_value: ~
+shells: []

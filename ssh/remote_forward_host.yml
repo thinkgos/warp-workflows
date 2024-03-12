@@ -1,0 +1,27 @@
+name: "Remote forward host within ssh"
+command: "ssh -CfNg -L {{local_addr}}:{{remote_addr}} -o TCPKeepAlive=yes -o ServerAliveInterval=30 {{user}}@{{host}}"
+tag:
+  - ssh
+description: |
+  ssh远程端口转发, 将本地主机(local_addr)转发到远程主机(remote_addr),并建立一个持久的ssh链接
+    -C: 启用压缩传输, 以减少网络流量
+    -f: 在后台运行 SSH 客户端
+    -N: 不执行远程命令, 仅建立 SSH 连接
+    -g: 允许远程主机(服务器)上的其他主机连接到本地转发端口. 默认情况下同, 转发只接受来自本地主机的连接.
+arguments:
+  - name: "local_addr"
+    description: "本地主机地址"
+    default_value: 3306
+  - name: "remote_addr"
+    description: "远程主机地址"
+    default_value: 127.0.0.1:3306
+  - name: "user"
+    description: 用户名
+    default_value: root
+  - name: "host"
+    description: 主机
+    default_value: ~
+  - name: "port"
+    description: 端口
+    default_value: 22
+shells: []

@@ -1,0 +1,22 @@
+---
+name: "Filter output the last part of file"
+command: "tail -n {{NUM}} {{FILE}} | grep {{PATTERNS}} {{FORMAT}}"
+tag:
+  - linux
+description: ""
+arguments:
+  - name: "NUM"
+    description: |
+      output the last NUM lines, instead of the last 10;
+      or use -n +NUM to output starting with line NUM
+    default_value: 5000
+  - name: "FILE"
+    description: 文件
+    default_value: ~
+  - name: "PATTERNS"
+    description: 匹配模式
+    default_value: ~
+  - name: "FORMAT"
+    description: 格式化
+    default_value: "| jq ."
+shells: []

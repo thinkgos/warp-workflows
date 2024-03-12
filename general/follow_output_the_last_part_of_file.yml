@@ -1,0 +1,14 @@
+---
+name: "Follow output the last part of file"
+command: "tail -f {{FILE}} {{FORMAT}}"
+tag:
+  - linux
+description: ""
+arguments:
+  - name: "FILE"
+    description: 文件
+    default_value: ~
+  - name: "FORMAT"
+    description: 格式化
+    default_value: "| jq ."
+shells: []

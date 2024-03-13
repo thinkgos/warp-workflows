@@ -1,0 +1,22 @@
+---
+name: "View rule within iptables"
+command: "iptables -t {{table}} -L {{chain}}"
+tag:
+  - iptables
+  - netfilter
+description: |
+  查看iptables的表规则
+    -t: 操作的表
+    -L: 列出规则
+    -v: 展示更多信息
+    -n: 不进行名称解析
+    --line-numbers: 显示规则的序号
+    -x: 显示计数器的精确值
+arguments:
+  - name: "table"
+    description: 操作的表:raw,mangle,nat,filter
+    default_value: filter
+  - name: "chain"
+    description: 可选指定链:PREROUTING,INPUT,FORWARD,OUTPUT,POSTROUTING或自定义链
+    default_value: ~
+shells: []

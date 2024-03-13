@@ -1,0 +1,14 @@
+---
+name: "Save iptables"
+command: "iptables-save > {{file}}"
+tag:
+  - iptables
+  - netfilter
+description: |
+  保存iptables规则
+arguments:
+  - name: "file"
+    description: 文件
+    default_value: ~
+
+shells: []

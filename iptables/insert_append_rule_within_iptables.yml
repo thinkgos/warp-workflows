@@ -1,0 +1,31 @@
+---
+name: "Insert/Append rule within iptables"
+command: "iptables -t {{table}} {{action}} {{chain}} {{source}} {{target}}"
+tag:
+  - iptables
+  - netfilter
+description: |
+  插入/追加iptables的表规则
+    -t: 操作的表
+    -I: 插入指定编号,-I chain [rulenum], rulenum默认为1
+    -A: 链尾追加
+    -s: 源地址
+    -j: 规则的target
+arguments:
+  - name: "table"
+    description: 操作的表:raw,mangle,nat,filter
+    default_value: filter
+  - name: "action"
+    description: 插入/追加
+    default_value: "-I"
+  - name: "chain"
+    description: 可选指定链:PREROUTING,INPUT,FORWARD,OUTPUT,POSTROUTING或自定义链
+    default_value: "INPUT"
+  - name: "source"
+    description: 源地址
+    default_value: "-s ip"
+  - name: "target"
+    description: 规则的target
+    default_value: "-j DROP"
+
+shells: []

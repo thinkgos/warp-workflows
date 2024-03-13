@@ -1,0 +1,14 @@
+---
+name: "Restore iptables"
+command: "iptables-restore < {{file}}"
+tag:
+  - iptables
+  - netfilter
+description: |
+  重载iptables规则, 现有规则将被覆盖
+arguments:
+  - name: "file"
+    description: 文件
+    default_value: ~
+
+shells: []

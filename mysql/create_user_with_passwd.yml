@@ -1,0 +1,14 @@
+---
+name: "Create a user with passwd"
+command: "CREATE USER '{{username}}'@'%' IDENTIFIED BY '{{passwd}}';"
+tag:
+  - mysql
+description: "创建一个用户,并设置密码"
+arguments:
+  - name: "username"
+    description: ~
+    default_value: ~
+  - name: "passwd"
+    description: ~
+    default_value: ~
+shells: []

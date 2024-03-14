@@ -1,0 +1,11 @@
+---
+name: "View user permission"
+command: "SHOW GRANTS FOR '{{username}}'@'%';"
+tag:
+  - mysql
+description: "查看用户的权限"
+arguments:
+  - name: "username"
+    description: ~
+    default_value: ~
+shells: []

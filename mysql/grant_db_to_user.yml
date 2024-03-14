@@ -1,0 +1,14 @@
+---
+name: "Grant database to a user"
+command: "GRANT ALL PRIVILEGES ON {{db}}.* TO '{{username}}'@'%'"
+tag:
+  - mysql
+description: "将指定数据库的权限赋予用户"
+arguments:
+  - name: "db"
+    description: 数据库名,*表示所有数据库
+    default_value: ~
+  - name: "username"
+    description: ~
+    default_value: ~
+shells: []

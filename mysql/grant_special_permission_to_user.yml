@@ -1,0 +1,14 @@
+---
+name: "Grant special permission to user"
+command: "GRANT PROCESS, REPLICATION SLAVE, REPLICATION CLIENT ON {{db}}.* TO '{{username}}'@'%'"
+tag:
+  - mysql
+description: "授予用户特定的权限"
+arguments:
+  - name: "db"
+    description: 数据库名,*表示所有数据库
+    default_value: ~
+  - name: "username"
+    description: ~
+    default_value: ~
+shells: []

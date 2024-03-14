@@ -1,0 +1,20 @@
+---
+name: "Extract all files from archive tgz"
+command: "tar -xzvf {{tgz_file}} -C {{dir}}"
+tag:
+  - linux
+description: |
+  Extract all files from archive tgz
+    -x: 解压缩操作
+    -z: 使用gzip格式解压缩
+    -v: 显示详细的解压缩过程
+    -f: 指定解压缩的文件名
+    -C: 指定解压缩的目标目录
+arguments:
+  - name: "tgz_file"
+    description: ~
+    default_value: ~
+  - name: "dir"
+    description: ~
+    default_value: ~
+shells: []

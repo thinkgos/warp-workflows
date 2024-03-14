@@ -1,0 +1,19 @@
+---
+name: "Create archive txz from files"
+command: "tar -czvf {{tgz_file}} {{files}}"
+tag:
+  - linux
+description: |
+  Create archive txz from files
+   -c: 创建一个归档文件
+   -z: 使用gzip格式解压缩
+   -v: 显示详细的解压缩过程
+   -f: 指定解压缩的文件名
+arguments:
+  - name: "tgz_file"
+    description: ~
+    default_value: ~
+  - name: "files"
+    description: ~
+    default_value: ~
+shells: []

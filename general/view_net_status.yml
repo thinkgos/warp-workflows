@@ -1,0 +1,18 @@
+---
+name: "View net status"
+command: "netstat -tulnap"
+tag:
+  - linux
+description: |
+  View net status
+    -t: 仅显示tcp相关选项
+    -u: 仅显示udp相关选项
+    -l: 仅例出有Listen的服务状态
+    -n: 拒绝显示别名
+    -a: 显示所有选项, 默认不显示LISTEN相关
+    -p: 显示建立相关链接的程序名
+# arguments:
+#   - name: ""
+#     description: ~
+#     default_value: ~
+shells: []
